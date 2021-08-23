@@ -8,9 +8,9 @@ import { defineMessages } from 'react-intl';
 export const scope = 'boilerplate.containers.HomePage';
 
 export default defineMessages({
-  startProjectHeader: {
-    id: `${scope}.start_project.header`,
-    defaultMessage: 'Start your next react project in seconds',
+  siteNameHeader: {
+    id: `${scope}.site_name.header`,
+    defaultMessage: 'My Product Guys React App',
   },
   startProjectMessage: {
     id: `${scope}.start_project.message`,

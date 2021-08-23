@@ -78,7 +78,7 @@ export default function HomePage() {
       <div>
         <CenteredSection>
           <H2>
-            <FormattedMessage {...messages.startProjectHeader} />
+            <FormattedMessage {...messages.siteNameHeader} />
           </H2>
           <p>
             <FormattedMessage {...messages.startProjectMessage} />
