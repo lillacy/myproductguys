@@ -10,6 +10,7 @@ import { Helmet } from 'react-helmet-async';
 import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { useSelector, useDispatch } from 'react-redux';
+import { motion } from 'framer-motion';
 
 import { useInjectReducer, useInjectSaga } from 'redux-injectors';
 import {
@@ -88,6 +89,26 @@ export default function HomePage() {
           <H2>
             <FormattedMessage {...messages.trymeHeader} />
           </H2>
+          <motion.div
+            style={{
+              background: 'blue',
+              borderRadius: '30px',
+              width: '150px',
+              height: '150px',
+            }}
+            animate={{
+              scale: [1, 2, 2, 1, 1],
+              rotate: [0, 0, 270, 270, 0],
+              borderRadius: ['20%', '20%', '50%', '50%', '20%'],
+            }}
+            transition={{
+              duration: 2,
+              ease: 'easeInOut',
+              times: [0, 0.2, 0.5, 0.8, 1],
+              loop: Infinity,
+              repeatDelay: 1,
+            }}
+          />
           <Form onSubmit={onSubmitForm}>
             <label htmlFor="username">
               <FormattedMessage {...messages.trymeMessage} />
